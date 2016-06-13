@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFCDD2">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Spider Inductions 2016"
+            android:id="@+id/spider"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal" />
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textCapWords"
+            android:hint="Name"
+            android:ems="10"
+            android:id="@+id/editName"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_below="@+id/spider"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:maxLines="1"
+            android:layout_gravity="right" />
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:ems="10"
+            android:id="@+id/editRoll"
+            android:hint="Roll No."
+            android:layout_below="@+id/editName"
+            android:layout_alignLeft="@+id/editName"
+            android:layout_alignStart="@+id/editName"
+            android:maxLines="1"
+            android:maxLength="9"
+            android:layout_gravity="right" />
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/switchMentor"
+            android:checked="false"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@+id/rollText"
+            android:layout_toEndOf="@+id/rollText" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Name"
+            android:id="@+id/nameText"
+            android:layout_alignTop="@+id/editName"
+            android:layout_alignRight="@+id/profile"
+            android:layout_alignEnd="@+id/profile" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Roll No."
+            android:id="@+id/rollText"
+            android:layout_alignTop="@+id/editRoll"
+            android:layout_alignLeft="@+id/nameText"
+            android:layout_alignStart="@+id/nameText" />
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinner"
+            android:layout_alignBaseline="@+id/deptText"
+            android:layout_alignBottom="@+id/deptText"
+            android:layout_alignLeft="@+id/editRoll"
+            android:layout_alignStart="@+id/editRoll" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Dept"
+            android:id="@+id/deptText"
+            android:layout_below="@+id/editRoll"
+            android:layout_alignLeft="@+id/rollText"
+            android:layout_alignStart="@+id/rollText" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Algos"
+            android:id="@+id/checkBox"
+            android:checked="false"
+            android:layout_alignTop="@+id/checkBox2"
+            android:layout_alignLeft="@+id/spider"
+            android:layout_alignStart="@+id/spider" />
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="AppDev"
+            android:id="@+id/checkBox2"
+            android:checked="false"
+            android:layout_below="@+id/spinner"
+            android:layout_alignLeft="@+id/spinner"
+            android:layout_alignStart="@+id/spinner" />
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tronix"
+        android:id="@+id/checkBox3"
+        android:checked="false"
+        android:layout_above="@+id/submit"
+        android:layout_alignLeft="@+id/checkBox"
+        android:layout_alignStart="@+id/checkBox" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="WebDev"
+        android:id="@+id/checkBox4"
+        android:checked="false"
+        android:layout_below="@+id/checkBox2"
+        android:layout_alignLeft="@+id/checkBox2"
+        android:layout_alignStart="@+id/checkBox2" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:id="@+id/submit"
+        android:onClick="submitting"
+        android:layout_alignBaseline="@+id/textView"
+        android:layout_alignBottom="@+id/textView"
+        android:layout_alignRight="@+id/editRoll"
+        android:layout_alignEnd="@+id/editRoll" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Mentor"
+        android:id="@+id/textView"
+        android:layout_alignBottom="@+id/switchMentor"
+        android:layout_alignLeft="@+id/deptText"
+        android:layout_alignStart="@+id/deptText" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Profile"
+        android:id="@+id/profile"
+        android:layout_alignTop="@+id/checkBox"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="19dp"
+        android:layout_marginStart="19dp" />
+    </RelativeLayout>

@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">SpiderTask2</string>
+    <string-array name="dept">
+        <item>Civil</item>
+        <item>Chem</item>
+        <item>CSE</item>
+        <item>EEE</item>
+        <item>ECE</item>
+        <item>ICE</item>
+        <item>Mech</item>
+        <item>Meta</item>
+        <item>Prod</item>
+    </string-array>
+</resources>
